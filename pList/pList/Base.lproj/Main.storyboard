@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fox.png" translatesAutoresizingMaskIntoConstraints="NO" id="wzB-XT-oR8">
+                                <rect key="frame" x="0.0" y="120" width="414" height="412"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6I-t1-eDB">
+                                <rect key="frame" x="171" y="665" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="lWJ-qJ-7KE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="MySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uln-LF-JuK"/>
+                                    <action selector="mySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="f9D-dR-oIc"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd3-Hd-OMY">
+                                <rect key="frame" x="34" y="90" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="myLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqK-bX-MNr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qd0-t2-c9I">
+                                <rect key="frame" x="291" y="90" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="myDeleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Em6-xt-zsU"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KsB-1b-bZy">
+                                <rect key="frame" x="142" y="601" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="9CA-Iu-csv"/>
+                                </constraints>
+                            </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="567-lO-2Ba">
+                                <rect key="frame" x="39" y="540" width="336" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="MV6-es-ajj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="MySerialNumber:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="LR3-L9-omr"/>
+                                    <action selector="mySerialNumber:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="YJQ-9S-rkc"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCR-XR-hSd">
+                                <rect key="frame" x="177" y="90" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="mySaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgv-kY-Nev"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="KsB-1b-bZy" firstAttribute="top" secondItem="567-lO-2Ba" secondAttribute="bottom" constant="27" id="5N7-qM-dfE"/>
+                            <constraint firstItem="O6I-t1-eDB" firstAttribute="top" secondItem="KsB-1b-bZy" secondAttribute="bottom" constant="35" id="8n9-Dr-zK9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KsB-1b-bZy" secondAttribute="trailing" constant="156" id="AmQ-y9-4Fy"/>
+                            <constraint firstItem="YCR-XR-hSd" firstAttribute="leading" secondItem="O6I-t1-eDB" secondAttribute="leading" id="BvG-2e-m14"/>
+                            <constraint firstItem="O6I-t1-eDB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="171" id="DYK-TF-b1i"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="centerX" secondItem="567-lO-2Ba" secondAttribute="centerX" id="FQU-pP-skV"/>
+                            <constraint firstItem="567-lO-2Ba" firstAttribute="top" secondItem="wzB-XT-oR8" secondAttribute="bottom" constant="8" symbolic="YES" id="HWx-3Y-t07"/>
+                            <constraint firstItem="rd3-Hd-OMY" firstAttribute="top" secondItem="Qd0-t2-c9I" secondAttribute="top" id="K4E-bC-mL5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O6I-t1-eDB" secondAttribute="bottom" constant="166" id="Msm-te-SLk"/>
+                            <constraint firstItem="rd3-Hd-OMY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="OAO-Rw-3I7"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pax-uW-kuE"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="top" secondItem="YCR-XR-hSd" secondAttribute="bottom" constant="8" symbolic="YES" id="QHe-uN-crb"/>
+                            <constraint firstItem="567-lO-2Ba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="Vvl-e5-U1e"/>
+                            <constraint firstItem="rd3-Hd-OMY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="keT-oV-gtr"/>
+                            <constraint firstItem="Qd0-t2-c9I" firstAttribute="leading" secondItem="YCR-XR-hSd" secondAttribute="trailing" constant="86" id="l9J-RT-en2"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="top" secondItem="rd3-Hd-OMY" secondAttribute="bottom" id="n4S-lc-skj"/>
+                            <constraint firstItem="KsB-1b-bZy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="u6Y-L8-ZRm"/>
+                            <constraint firstAttribute="trailing" secondItem="wzB-XT-oR8" secondAttribute="trailing" id="yQ6-7D-2oD"/>
+                            <constraint firstItem="rd3-Hd-OMY" firstAttribute="baseline" secondItem="Qd0-t2-c9I" secondAttribute="baseline" id="ztt-So-jcY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mySerialNumber" destination="567-lO-2Ba" id="fny-fa-vWv"/>
+                        <outlet property="mySlider" destination="KsB-1b-bZy" id="tWv-yE-jef"/>
+                        <outlet property="mySwitch" destination="O6I-t1-eDB" id="1O6-O3-SpR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Fox.png" width="512" height="486"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
